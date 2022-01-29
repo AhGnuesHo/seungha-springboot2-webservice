@@ -14,7 +14,7 @@ public class HelloResponseDtoTest {
         String name = "test";
         int amount = 1000;
 
-        //when
+        //wheㄹ
         HelloResponseDto dto = new HelloResponseDto(name, amount);
 
         //then
