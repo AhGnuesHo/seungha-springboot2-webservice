@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -16,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class PostRepositoryTest {
 
     @Autowired
-    PostRepository postRepository;
+    PostsRepository postRepository;
 
     @After // 단위테스트가 끝날때마다 수행되는 메소드, 데이터 간 데이터침범을 막기위해사용
     public void cleanUp(){
@@ -41,6 +42,29 @@ public class PostRepositoryTest {
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
+
+    }
+
+    @Test
+    public void BaseTimeEntity_등록() {
+        // given
+        LocalDateTime now = LocalDateTime.of(2022,1,4,0,0,0,0);
+        postRepository.save(Posts.builder()
+                .title("BaseTimeEntity title")
+                .content("BaseTimeEntity content")
+                .author("BaseTimeEntity author")
+                .build());
+
+        //when
+        List<Posts> postsList = postRepository.findAll();
+
+        //then
+        Posts posts = postsList.get(0);
+
+        System.out.println(">>>>> createDate = "+posts.getCreatedDate()+", modifiedDate = "+posts.getModifiedDate());
+
+        assertThat(posts.getCreatedDate()).isAfter(now);
+        assertThat(posts.getModifiedDate()).isAfter(now);
 
     }
 }

@@ -1,7 +1,11 @@
 package com.seungha.study.web;
 
 import com.seungha.study.web.dto.HelloResponseDto;
+import org.aspectj.weaver.ast.Or;
+import org.hibernate.criterion.Order;
 import org.springframework.web.bind.annotation.*;
+
+import javax.transaction.Transactional;
 
 @RestController
 public class HelloController {
@@ -16,4 +20,6 @@ public class HelloController {
         // RequestParam 외부에서 넘긴 파라메터를 가져오는 어노테이션.
         return new HelloResponseDto(name, amount);
     }
+
+
 }

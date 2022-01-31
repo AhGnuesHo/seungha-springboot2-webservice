@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Getter // Getter 메소드 생성
 @NoArgsConstructor // 기본생성자 추가
 @Entity // 테이블과 링크 될 클래스 임을 나타냄
-public class Posts {
+public class Posts extends BaseTimeEntity{
     @Id // 해당 테이블의  PK 입니다.
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     // PK생성규칙입니다. GenerationType.IDENTITY옵션을 추가해야 자동 증가를 사용할 수 있습니다.
@@ -28,5 +28,10 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update (String title, String content){
+        this.title = title;
+        this.content = content;
     }
 }
