@@ -1,7 +1,7 @@
 package com.seungha.study.web;
 
-import com.seungha.study.cofig.oauth.LoginUser;
-import com.seungha.study.cofig.oauth.dto.SessionUser;
+import com.seungha.study.config.oauth.LoginUser;
+import com.seungha.study.config.oauth.dto.SessionUser;
 import com.seungha.study.service.posts.PostsService;
 import com.seungha.study.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
-package com.seungha.study.cofig.oauth;
+package com.seungha.study.config.oauth;
 
-import com.seungha.study.cofig.oauth.dto.SessionUser;
+import com.seungha.study.config.oauth.dto.SessionUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;

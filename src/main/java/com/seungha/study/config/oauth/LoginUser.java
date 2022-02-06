@@ -1,4 +1,4 @@
-package com.seungha.study.cofig.oauth;
+package com.seungha.study.config.oauth;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

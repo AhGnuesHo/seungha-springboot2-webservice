@@ -1,11 +1,10 @@
-package com.seungha.study.cofig.oauth;
+package com.seungha.study.config.oauth;
 
-import com.seungha.study.cofig.oauth.dto.OAuthAttributes;
-import com.seungha.study.cofig.oauth.dto.SessionUser;
+import com.seungha.study.config.oauth.dto.OAuthAttributes;
+import com.seungha.study.config.oauth.dto.SessionUser;
 import com.seungha.study.domain.user.User;
 import com.seungha.study.domain.user.UserRepostiory;
 import lombok.RequiredArgsConstructor;
-import net.bytebuddy.build.Plugin;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;

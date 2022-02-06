@@ -1,4 +1,4 @@
-package com.seungha.study.cofig.oauth.dto;
+package com.seungha.study.config.oauth.dto;
 
 import com.seungha.study.domain.user.User;
 import lombok.Getter;

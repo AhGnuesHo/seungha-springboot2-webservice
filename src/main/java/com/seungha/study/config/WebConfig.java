@@ -1,5 +1,6 @@
-package com.seungha.study.cofig.oauth;
+package com.seungha.study.config;
 
+import com.seungha.study.config.oauth.LoginUserArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
